@@ -1,4 +1,4 @@
-# One-liner Dev Environment (vim + tmux + go)
+# One-liner Dev Environment (git + go + tmux + vim)
 
 Execute the one liner below to get everything setup for you
 ```
