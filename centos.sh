@@ -3,15 +3,17 @@
 set -e
 set -x
 
+GO_VERSION="1.11.4"
 VIM_VERSION="8.1.0996"
+TMUX_VERSION="2.8"
 
 # tools
-yum install -y git tmux gcc-c++ ncurses-devel python-devel
+yum install -y git gcc-c++ ncurses-devel python-devel libevent-devel
 
 mkdir -p ~/tmp
 
 # go
-pushd ~/tmp && wget https://dl.google.com/go/go1.11.4.linux-amd64.tar.gz && tar -C /usr/local -xzf go1.11.4.linux-amd64.tar.gz && popd
+pushd ~/tmp && wget https://dl.google.com/go/go$GO_VERSION.linux-amd64.tar.gz && tar -C /usr/local -xzf go$GO_VERSION.linux-amd64.tar.gz && popd
 echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.bash_profile && echo "export GOPATH=/root/go" >> ~/.bash_profile && source ~/.bash_profile
 
 # vim for centos 7.6
@@ -32,8 +34,8 @@ git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 vim +GoInstallBinaries +qall 
 
 # tmux
-pushd ~/tmp && wget https://github.com/downloads/libevent/libevent/libevent-2.0.21-stable.tar.gz && tar zxvf libevent-2.0.21-stable.tar.gz && cd libevent-2.0.21-stable && ./configure && make && make install && popd
-pushd ~/tmp && wget https://github.com/tmux/tmux/releases/download/2.8/tmux-2.8.tar.gz && tar zxvf tmux-2.8.tar.gz && cd tmux-2.8 && ./configure && make && make install && popd
+#pushd ~/tmp && wget https://github.com/downloads/libevent/libevent/libevent-2.0.21-stable.tar.gz && tar zxvf libevent-2.0.21-stable.tar.gz && cd libevent-2.0.21-stable && ./configure && make && make install && popd
+pushd ~/tmp && wget https://github.com/tmux/tmux/releases/download/$TMUX_VERSION/tmux-$TMUX_VERSION.tar.gz && tar zxvf tmux-$TMUX_VERSION.tar.gz && cd tmux-$TMUX_VERSION && ./configure && make && make install && popd
 
 # tmux conf
 pushd ~/ && git clone https://github.com/gpakosz/.tmux.git && ln -s -f .tmux/.tmux.conf && cp .tmux/.tmux.conf.local . && popd
