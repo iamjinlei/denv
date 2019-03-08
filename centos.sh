@@ -28,6 +28,9 @@ curl -LSso ~/.vimrc https://raw.githubusercontent.com/iamjinlei/env/master/vimrc
 
 # vim-colors-solarized
 git clone https://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vim-colors-solarized
+# vim status line
+git clone https://github.com/vim-airline/vim-airline.git ~/.vim/bundle/vim-airline
+git clone git@github.com:vim-airline/vim-airline-themes.git ~/.vim/bundle/vim-airline-themes
 
 # vim-go
 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
