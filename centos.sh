@@ -42,7 +42,7 @@ pushd ~/ && git clone https://github.com/gpakosz/.tmux.git && ln -s -f .tmux/.tm
 curl -LSso ~/tmp/tmux.conf https://raw.githubusercontent.com/iamjinlei/env/master/tmux.conf && cat ~/tmp/tmux.conf >> ~/.tmux.conf.local
 
 # enable tmux powerline symbol
-sed -i .bk 's/tmux_conf_theme_left_separator_main/#tmux_conf_theme_left_separator_main/g; s/tmux_conf_theme_left_separator_sub/#tmux_conf_theme_left_separator_sub/g; s/tmux_conf_theme_right_separator_main/#tmux_conf_theme_right_separator_main/g; s/tmux_conf_theme_right_separator_sub/#tmux_conf_theme_right_separator_sub/g' ~/.tmux.conf.local 
-sed -i .bk 's/##tmux_conf_theme_left_separator_main/tmux_conf_theme_left_separator_main/g; s/##tmux_conf_theme_left_separator_sub/tmux_conf_theme_left_separator_sub/g; s/##tmux_conf_theme_right_separator_main/tmux_conf_theme_right_separator_main/g; s/##tmux_conf_theme_right_separator_sub/tmux_conf_theme_right_separator_sub/g' ~/.tmux.conf.local 
+sed -i .bk 's/tmux_conf_theme_left_separator_main/#tmux_conf_theme_left_separator_main/g; s/tmux_conf_theme_left_separator_sub/#tmux_conf_theme_left_separator_sub/g; s/tmux_conf_theme_right_separator_main/#tmux_conf_theme_right_separator_main/g; s/tmux_conf_theme_right_separator_sub/#tmux_conf_theme_right_separator_sub/g' ~/.tmux.conf.local
+sed -i .bk 's/##tmux_conf_theme_left_separator_main/tmux_conf_theme_left_separator_main/g; s/##tmux_conf_theme_left_separator_sub/tmux_conf_theme_left_separator_sub/g; s/##tmux_conf_theme_right_separator_main/tmux_conf_theme_right_separator_main/g; s/##tmux_conf_theme_right_separator_sub/tmux_conf_theme_right_separator_sub/g' ~/.tmux.conf.local
 
 rm -rf ~/tmp
