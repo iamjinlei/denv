@@ -1,5 +1,9 @@
 # One-liner Dev Environment (git + go + tmux + vim)
 
+## Supported OS
+
+- Centos
+
 ## Screenshot
 
 ![](https://github.com/iamjinlei/env/raw/master/imgs/screenshot.png)
