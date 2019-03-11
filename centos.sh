@@ -20,7 +20,7 @@ echo "export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin" >> ~/.bash_profile
 # vim for centos 7.6
 pushd ~/tmp && wget https://github.com/vim/vim/archive/v$VIM_VERSION.tar.gz && tar zxvf v$VIM_VERSION.tar.gz && cd vim-$VIM_VERSION/src && make && make install && popd
 echo "alias vi='vim'" >> ~/.bash_profile
-echo "alias gshow='git show'" >> ~/.bash_profile
+echo "alias gshow='git show --color'" >> ~/.bash_profile
 echo "alias gamend='git commit --amend'" >> ~/.bash_profile
 echo "alias gdiff='git diff --color'" >> ~/.bash_profile
 echo "alias rm='rm -i'" >> ~/.bash_profile
