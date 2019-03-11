@@ -1,4 +1,4 @@
-# One-liner Dev Environment (git + go + tmux + vim)
+# One-liner Dev Environment Setup (git + go + tmux + vim)
 
 ## Supported OS
 
