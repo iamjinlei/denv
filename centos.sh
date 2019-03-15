@@ -14,18 +14,9 @@ mkdir -p ~/tmp
 
 # go
 pushd ~/tmp && wget https://dl.google.com/go/go$GO_VERSION.linux-amd64.tar.gz && tar -C /usr/local -xzf go$GO_VERSION.linux-amd64.tar.gz && popd
-echo "export GOPATH=/root/go" >> ~/.bash_profile
-echo "export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin" >> ~/.bash_profile
 
 # vim for centos 7.6
 pushd ~/tmp && wget https://github.com/vim/vim/archive/v$VIM_VERSION.tar.gz && tar zxvf v$VIM_VERSION.tar.gz && cd vim-$VIM_VERSION/src && make && make install && popd
-echo "alias vi='vim'" >> ~/.bash_profile
-echo "alias gshow='git show --color'" >> ~/.bash_profile
-echo "alias gamend='git commit --amend'" >> ~/.bash_profile
-echo "alias gdiff='git diff --color'" >> ~/.bash_profile
-echo "alias rm='rm -i'" >> ~/.bash_profile
-echo "export EDITOR='vim'" >> ~/.bash_profile
-source ~/.bash_profile
 
 # pathogen vim runtime path management
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
@@ -55,3 +46,13 @@ sed -i.bk 's/tmux_conf_theme_left_separator_main/#tmux_conf_theme_left_separator
 sed -i.bk 's/##tmux_conf_theme_left_separator_main/tmux_conf_theme_left_separator_main/g; s/##tmux_conf_theme_left_separator_sub/tmux_conf_theme_left_separator_sub/g; s/##tmux_conf_theme_right_separator_main/tmux_conf_theme_right_separator_main/g; s/##tmux_conf_theme_right_separator_sub/tmux_conf_theme_right_separator_sub/g' ~/.tmux.conf.local
 
 rm -rf ~/tmp
+
+# bash env
+echo "export GOPATH=/root/go" >> ~/.bash_profile
+echo "export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin" >> ~/.bash_profile
+echo "alias vi='vim'" >> ~/.bash_profile
+echo "alias gshow='git show --color'" >> ~/.bash_profile
+echo "alias gamend='git commit --amend'" >> ~/.bash_profile
+echo "alias gdiff='git diff --color'" >> ~/.bash_profile
+echo "alias rm='rm -i'" >> ~/.bash_profile
+echo "export EDITOR='vim'" >> ~/.bash_profile
