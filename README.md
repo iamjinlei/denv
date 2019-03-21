@@ -1,4 +1,15 @@
-# One-liner Dev Environment Setup (git + go + tmux + vim)
+# One-liner Dev Environment Setup
+
+## Included Packages
+
+* git
+* go
+* tmux
+* tmux powerline
+* vim
+* vim-colors-solarized
+* vim-airline
+* vim-go
 
 ## Supported OS
 
