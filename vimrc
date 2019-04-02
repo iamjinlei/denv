@@ -13,8 +13,11 @@ hi CursorLine term=bold cterm=bold guibg=Grey40
 set hlsearch
 set viminfo='20,<1000
 
-noremap tl :GoDef<CR> 
+autocmd FileType go noremap tl :GoDef<CR> 
+autocmd FileType cpp noremap tl <c-]>
 noremap th <c-o>
+
+set tags=./tags;/
 
 "autocmd Filetype go set tabstop=4
 "autocmd Filetype go set shiftwidth=4 
