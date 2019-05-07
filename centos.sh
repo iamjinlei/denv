@@ -3,12 +3,18 @@
 set -e
 set -x
 
+# $1 - name
+# $2 - email
+
 GO_VERSION="1.11.4"
 VIM_VERSION="8.1.0996"
 TMUX_VERSION="2.8"
 
 # tools
 yum install -y git gcc-c++ ncurses-devel python-devel libevent-devel
+
+if [ !-z "$1" ] && git config --global user.name $1
+if [ !-z "$2" ] && git config --global user.email $2
 
 mkdir -p ~/tmp
 
