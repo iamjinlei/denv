@@ -13,8 +13,8 @@ TMUX_VERSION="2.8"
 # tools
 yum install -y git gcc-c++ ncurses-devel python-devel libevent-devel
 
-if [ !-z "$1" ] && git config --global user.name $1
-if [ !-z "$2" ] && git config --global user.email $2
+#if [ !-z "$1" ] && git config --global user.name $1
+#if [ !-z "$2" ] && git config --global user.email $2
 
 mkdir -p ~/tmp
 
@@ -38,7 +38,7 @@ git clone https://github.com/vim-airline/vim-airline-themes.git ~/.vim/bundle/vi
 
 # vim-go
 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
-vim +GoInstallBinaries +qall 
+vim +GoInstallBinaries +qall
 
 # tmux
 pushd ~/tmp && wget https://github.com/tmux/tmux/releases/download/$TMUX_VERSION/tmux-$TMUX_VERSION.tar.gz && tar zxvf tmux-$TMUX_VERSION.tar.gz && cd tmux-$TMUX_VERSION && ./configure && make && make install && popd
@@ -59,10 +59,11 @@ rm -rf ~/tmp
 # bash env
 echo "export GOPATH=/root/go" >> ~/.bash_profile
 echo "export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin" >> ~/.bash_profile
+echo "export EDITOR=vim" >> ~/.bash_profile
+
 echo "alias vi='vim'" >> ~/.bash_profile
 echo "alias gshow='git show --color'" >> ~/.bash_profile
 echo "alias gamend='git commit --amend'" >> ~/.bash_profile
 echo "alias gdiff='git diff --color'" >> ~/.bash_profile
 echo "alias rm='rm -i'" >> ~/.bash_profile
 echo "alias grep='grep --color=always'" >> ~/.bash_profile
-echo "export EDITOR='vim'" >> ~/.bash_profile
