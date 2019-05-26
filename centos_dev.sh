@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#
+# This script installs basic development tool chains for CentOs system
+#
+
 set -e
 set -x
 
