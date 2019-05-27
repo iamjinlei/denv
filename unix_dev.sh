@@ -80,4 +80,4 @@ echo "alias grep='grep --color=always'" >> ~/.bash_profile
 source ~/.bash_profile
 
 go get -u github.com/jstemmer/gotags
-vim +GoInstallBinaries +qall
+vim -E +GoInstallBinaries +qall
