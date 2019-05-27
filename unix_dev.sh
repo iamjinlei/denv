@@ -80,4 +80,5 @@ echo "source ~/.bashrc" >> ~/.bash_profile
 
 source ~/.bash_profile
 
-tmux new-session -d -s "vim" vim +GoInstallBinaries +qall
+# This command does not work very well under ubuntu
+vim +GoInstallBinaries +qall
