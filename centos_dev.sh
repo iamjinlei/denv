@@ -42,7 +42,6 @@ git clone https://github.com/vim-airline/vim-airline-themes.git ~/.vim/bundle/vi
 
 # vim-go
 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
-PATH=$PATH:/usr/local/go/bin vim +GoInstallBinaries +qall
 
 # tmux
 pushd ~/tmp && wget https://github.com/tmux/tmux/releases/download/$TMUX_VERSION/tmux-$TMUX_VERSION.tar.gz && tar zxvf tmux-$TMUX_VERSION.tar.gz && cd tmux-$TMUX_VERSION && ./configure && make && make install && popd
@@ -71,3 +70,5 @@ echo "alias gamend='git commit --amend'" >> ~/.bash_profile
 echo "alias gdiff='git diff --color'" >> ~/.bash_profile
 echo "alias rm='rm -i'" >> ~/.bash_profile
 echo "alias grep='grep --color=always'" >> ~/.bash_profile
+
+vim -e +GoInstallBinaries +qall
