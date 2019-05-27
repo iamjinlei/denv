@@ -10,12 +10,15 @@ set -x
 # $1 - name
 # $2 - email
 
+OS=$(awk -F= '/^NAME/{print $2}' /etc/os-release)
 GO_VERSION="1.11.4"
 VIM_VERSION="8.1.0996"
 TMUX_VERSION="2.8"
 
 # tools
-yum install -y git gcc-c++ ncurses-devel python-devel libevent-devel
+if [ $OS = "CentOS Linux" ]; then
+    yum install -y git gcc-c++ ncurses-devel python-devel libevent-devel
+fi
 
 #if [ !-z "$1" ] && git config --global user.name $1
 #if [ !-z "$2" ] && git config --global user.email $2
@@ -73,4 +76,4 @@ echo "alias grep='grep --color=always'" >> ~/.bash_profile
 
 source ~/.bash_profile
 
-vim -e +GoInstallBinaries +qall
+vim +GoInstallBinaries +qall
