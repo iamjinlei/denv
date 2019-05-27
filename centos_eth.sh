@@ -15,3 +15,4 @@ npm install -g truffle
 
 #pushd ~/tmp && curl -sL https://rpm.nodesource.com/setup_10.x | bash && yum install -y nodejs && popd
 # npm install ganache-cli web3@1.0.0-beta.37
+rm -rf ~/tmp
