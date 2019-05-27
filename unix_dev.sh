@@ -18,7 +18,7 @@ if [[ "$OS" == *"CentOS"* ]]; then
 elif [[ "$OS" == *"Ubuntu"* ]]; then
     apt-get update
     apt install -y software-properties-common
-    add-apt-repository ppa:ubuntu-toolchain-r/test
+    add-apt-repository -y ppa:ubuntu-toolchain-r/test
     apt-get update
     apt-get install -y git g++-4.9 build-essential libncurses5-dev libncursesw5-dev python-dev libevent-dev
 else
@@ -79,4 +79,5 @@ echo "alias grep='grep --color=always'" >> ~/.bash_profile
 
 source ~/.bash_profile
 
+go get -u github.com/jstemmer/gotags
 vim +GoInstallBinaries +qall
