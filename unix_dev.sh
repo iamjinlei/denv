@@ -80,5 +80,4 @@ echo "source ~/.bashrc" >> ~/.bash_profile
 
 source ~/.bash_profile
 
-go get -u github.com/jstemmer/gotags
-vim +GoInstallBinaries +qall
+tmux new-session -d -s "vim" vim +GoInstallBinaries +qall
