@@ -13,15 +13,16 @@ VIM_VERSION="8.1.0996"
 TMUX_VERSION="2.8"
 
 # tools
-if [ "$OS" == *"CentOS"* ]; then
+if [[ "$OS" == *"CentOS"* ]]; then
     yum install -y git gcc-c++ ncurses-devel python-devel libevent-devel
-elif [ "$OS" == *"Ubuntu"* ]; then
+elif [[ "$OS" == *"Ubuntu"* ]]; then
     apt-get update
+    apt install -y software-properties-common
     add-apt-repository ppa:ubuntu-toolchain-r/test
     apt-get update
     apt-get install -y git g++-4.9 build-essential libncurses5-dev libncursesw5-dev python-dev libevent-dev
 else
-    echo "unsupported OS!"
+    echo "unsupported OS: $OS!"
     exit
 fi
 
