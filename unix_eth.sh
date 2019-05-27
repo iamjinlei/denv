@@ -10,7 +10,8 @@ set -x
 mkdir -p ~/tmp
 
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-source ~/.bashrc
+
+PS1="ssh" source ~/.bashrc
 
 nvm install node
 npm install -g truffle
