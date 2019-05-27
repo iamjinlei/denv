@@ -76,7 +76,7 @@ echo "alias gamend='git commit --amend'" >> ~/.bash_profile
 echo "alias gdiff='git diff --color'" >> ~/.bash_profile
 echo "alias rm='rm -i'" >> ~/.bash_profile
 echo "alias grep='grep --color=always'" >> ~/.bash_profile
-echo "source ~/.bashrc'" >> ~/.bash_profile
+echo "source ~/.bashrc" >> ~/.bash_profile
 
 source ~/.bash_profile
 
