@@ -14,6 +14,7 @@
 ## Supported OS
 
 - Centos
+- Ubuntu
 
 ## Screenshot
 
