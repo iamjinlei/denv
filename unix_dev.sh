@@ -80,5 +80,4 @@ echo "source ~/.bashrc" >> ~/.bash_profile
 
 source ~/.bash_profile
 
-# This command does not work very well under ubuntu
-vim +GoInstallBinaries +qall
+vim -T dumb -c 'set nomore' +GoInstallBinaries +qall
