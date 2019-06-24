@@ -67,7 +67,7 @@ rm -rf ~/tmp
 
 # bash env
 echo "export GOPATH=/root/go" >> ~/.bash_profile
-echo "export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin" >> ~/.bash_profile
+echo "export PATH=$PATH:/usr/local/go/bin:/root/go/bin" >> ~/.bash_profile
 echo "export EDITOR=vim" >> ~/.bash_profile
 
 echo "alias vi='vim'" >> ~/.bash_profile
@@ -79,5 +79,8 @@ echo "alias grep='grep --color=always'" >> ~/.bash_profile
 echo "source ~/.bashrc" >> ~/.bash_profile
 
 source ~/.bash_profile
+
+# govender
+go get -u github.com/kardianos/govendor
 
 vim -T dumb -c 'set nomore' +GoInstallBinaries +qall
