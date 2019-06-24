@@ -14,7 +14,10 @@ TMUX_VERSION="2.8"
 
 # tools
 if [[ $OS == *"CentOS"* ]]; then
-    yum install -y git gcc-c++ ncurses-devel python-devel libevent-devel
+	yum -y update
+    yum install -y git gcc-c++ ncurses-devel libevent-devel centos-release-scl rh-python36
+	scl enable rh-python36 bash
+	yum groupinstall -y 'Development Tools'
 elif [[ $OS == *"Ubuntu"* ]]; then
     apt-get update
     apt install -y software-properties-common
