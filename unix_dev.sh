@@ -70,7 +70,7 @@ rm -rf ~/tmp
 
 # bash env
 echo "export GOPATH=/root/go" >> ~/.bash_profile
-echo "export PATH=$PATH:/usr/local/go/bin:/root/go/bin" >> ~/.bash_profile
+echo "export PATH=$PATH:/usr/local/go/bin:/root/go/bin:/opt/rh/rh-python36/root/usr/bin/" >> ~/.bash_profile
 echo "export EDITOR=vim" >> ~/.bash_profile
 
 echo "alias vi='vim'" >> ~/.bash_profile
