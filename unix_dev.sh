@@ -8,7 +8,7 @@ set -e
 set -x
 
 OS=$(awk -F= '/^NAME/{print $2}' /etc/os-release)
-GO_VERSION="1.11.4"
+GO_VERSION="1.13.4"
 VIM_VERSION="8.1.0996"
 TMUX_VERSION="2.8"
 
@@ -72,6 +72,9 @@ rm -rf ~/tmp
 echo "export GOPATH=/root/go" >> ~/.bash_profile
 echo "export PATH=$PATH:/usr/local/go/bin:/root/go/bin:/opt/rh/rh-python36/root/usr/bin/" >> ~/.bash_profile
 echo "export EDITOR=vim" >> ~/.bash_profile
+echo "export GO111MODULE=on" >> ~/.bash_profile
+echo "export GOPROXY=https://goproxy.io" >> ~/.bash_profile
+
 
 echo "alias vi='vim'" >> ~/.bash_profile
 echo "alias gshow='git show --color'" >> ~/.bash_profile
@@ -84,6 +87,6 @@ echo "source ~/.bashrc" >> ~/.bash_profile
 source ~/.bash_profile
 
 # govender
-go get -u github.com/kardianos/govendor
+# go get -u github.com/kardianos/govendor
 
 vim -T dumb -c 'set nomore' +GoInstallBinaries +qall
