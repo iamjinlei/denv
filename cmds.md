@@ -1,9 +1,11 @@
-### Pull go pkg into src dir for vim-go to navigate 
+### Bash
 
 ```bash
 # example: goget github.com/iamjinlei/denv
 
-function goget { http_proxy=http://127.0.0.1:1087 https_proxy=http://127.0.0.1:1087 GO111MODULE=off go get -u $1; }
+export PROXY=http://127.0.0.1:1081
+function goget { git config --global http.proxy $PROXY; http_proxy=$PROXY https_proxy=$PROXY GO111MODULE=off go get $1; git config --global --unset http.proxy; }
+
 export -f goget
 ```
 
